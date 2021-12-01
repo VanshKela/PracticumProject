@@ -4,11 +4,12 @@ import Home from "./components/Home";
 import CropRecommender from "./components/CropRecommender";
 import FertilizerRecommender from "./components/FertilizerRecommender";
 import NavBar from "./components/NavBar";
+import backgroundImage from "./images/background.jpeg";
 
 function App() {
   return (
     <div style={{
-      backgroundImage:`url(${process.env.PUBLIC_URL + 'assets/background.jpg'})`
+      backgroundImage: `url(${backgroundImage})`,
     }} className="container">
       <div class="overlay">
       <Router>
