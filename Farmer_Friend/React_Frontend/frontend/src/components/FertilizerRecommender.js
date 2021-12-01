@@ -121,7 +121,7 @@ function FertilizerRecommender() {
         setPredictionData({})
     }
 
-    const predictedFertilizer = fertilizerData[predictionData.final_prediction]
+    const predictedFertilizer = fertilizerData[predictionData.svm_model_prediction]
 
 
 
@@ -158,8 +158,6 @@ function FertilizerRecommender() {
                                 </TableHead>
                                 <TableBody>
                                     <TableRow>
-                                        <TableCell align="center">{predictionData.xgb_model_prediction} ({predictionData.xgb_model_probability}%)</TableCell>
-                                        <TableCell align="center">{predictionData.rf_model_prediction} ({predictionData.rf_model_probability}%)</TableCell>
                                         <TableCell align="center">{predictionData.svm_model_prediction} ({predictionData.svm_model_probability}%)</TableCell>
                                     </TableRow>
                                 </TableBody>

@@ -72,6 +72,7 @@ function CropRecommender() {
         )
         
         const responseData = response.data
+        console.log(responseData);
         setPredictionData(responseData)
         setLoadingStatus(false)
     }
@@ -82,7 +83,7 @@ function CropRecommender() {
 
     const classes = useStyles();
 
-    const predictedCrop = cropData[predictionData.final_prediction]
+    const predictedCrop = cropData[predictionData.knn_model_prediction]
 
 
     if(predictionData.final_prediction) {
@@ -119,8 +120,6 @@ function CropRecommender() {
                                 </TableHead>
                                 <TableBody>
                                     <TableRow>
-                                        <TableCell align="center">{predictionData.xgb_model_prediction} ({predictionData.xgb_model_probability}%)</TableCell>
-                                        <TableCell align="center">{predictionData.rf_model_prediction} ({predictionData.rf_model_probability}%)</TableCell>
                                         <TableCell align="center">{predictionData.knn_model_prediction} ({predictionData.knn_model_probability}%)</TableCell>
                                     </TableRow>
                                 </TableBody>
