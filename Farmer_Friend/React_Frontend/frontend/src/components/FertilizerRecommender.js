@@ -153,9 +153,7 @@ function FertilizerRecommender() {
                             <Table className={classes.table} aria-label="simple table">
                                 <TableHead>
                                 <TableRow>
-                                    <TableCell component="th" align="center"><b>XGBoost Model Prediction</b></TableCell>
-                                    <TableCell component="th" align="center"><b>RandomForest Model Prediction</b></TableCell>
-                                    <TableCell component="th" align="center"><b>SVM Model Prediction</b></TableCell>
+                                    <TableCell colSpan={3} component="th" align="center"><b>Prediction</b></TableCell>
                                 </TableRow>
                                 </TableHead>
                                 <TableBody>
